@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callie The Calculator</title>
+    <link href = "styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class = "calculatorGrid">
+       <div class = "output">
+        <div dataPreviousOperand class = "previousOperand"></div>
+        <div dataCurrentOperand class = "currentOperand"></div>
+       </div> 
+       <button dataAC class="span2">AC</button>
+       <button dataDEL>DEL</button>
+       <button dataOperation>+</button> 
+       <!-- for js => use data attribute instead of class -->
+       <button dataNum>1</button>
+       <button dataNum>2</button>
+       <button dataNum>3</button>
+       <button dataOperation>-</button>
+       <button dataNum>4</button>
+       <button dataNum>5</button>
+       <button dataNum>6</button>
+       <button dataOperation>x</button>
+       <button dataNum>7</button>
+       <button dataNum>8</button>
+       <button dataNum>9</button>
+       <button dataOperation>÷</button>
+       <button dataNum>.</button>
+       <button dataNum>0</button>
+       <button dataEqual class="span2">=</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+/* "*" = select all*/
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family:Haettenschweiler, sans-serif;
+    font-weight:normal;
+}
+
+body {
+    padding:0;
+    margin:0;
+    background: linear-gradient(to left, #bf6735,#FCAE1E);
+}
+
+.calculatorGrid {
+    display:grid;
+    justify-content:center;
+    align-content:center; 
+    /*align-content >>>> align-item here*/
+    min-height:100vh; 
+    /*Always take 100% of window height*/
+    grid-template-columns: repeat(4,100px); 
+    /*4 columns, 100 pixels wide*/
+    grid-template-rows: minmax(120px,auto) repeat(5,100px); 
+    /*minmax allows output row to grow as large as we need (min 120 pixels) then repeat 5 rows*/
+}
+
+.calculatorGrid > button { 
+    /*element within class*/
+    cursor:crosshair;
+    font-size: 2.2rem; 
+    /*root em (u of m) => font size of root element (1rem = font size of html element ~ default val 16px*/
+    border: 1.1px solid white;
+    outline:none;
+    background-color: rgba(255,255,255,.8);
+}
+
+.calculatorGrid > button:hover {
+    background-color: rgba(255,255,255,.9);
+}
+
+.span2 {
+    grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1; 
+    /*column 1 to column -1(last)*/
+    background-color: rgba(59, 30, 2, 0.8);
+    display:flex;
+    align-items:flex-end; 
+    /*flex-end => items on right side*/
+    justify-content: space-around; 
+    /*space-around >>> space-between in this case*/
+    flex-direction: column;
+    padding:11px;
+    word-wrap: break-word; 
+    /*can break word in the middle of it*/
+    word-break: break-all; 
+    /*can break all words*/
+}
+
+.output .previousOperand { 
+    /*class within class*/
+    color: rgba(255,255,255,.7);
+    font-size:1.55rem;
+}
+
+
+.output .currentOperand { 
+    /*class within class*/
+    color: white;
+    font-size:2.55rem;
+}
+
